@@ -10,8 +10,7 @@ public class Animal {
     boolean whiskers;
     /**
      * Allows user to check whether given object is a Cat type by testing fields
-     * <p>
-     * Specifically, checks whiskers and legs fields for correlation with known attributes of cats. 
+     * <p> 
      * Because it takes a Cat type object as a parameter, essentially checks to see if the object 
      * has been modified in any way beyond the original attributes of the stock Cat object.
      * @param cat : pass a Cat type item into this argument. 

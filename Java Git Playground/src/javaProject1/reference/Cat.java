@@ -13,5 +13,4 @@ public class Cat extends Animal {
 		this.legs = 4;
 		this.whiskers = true;
 	}
-	
 }
