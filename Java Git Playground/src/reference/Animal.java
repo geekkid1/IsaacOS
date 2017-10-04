@@ -6,6 +6,16 @@ package reference;
  * @author Isaac Blum
  */
 public class Animal {
-
+    int legs;
+    boolean whiskers;
+    public static boolean isItACat(Cat cat) {
+    	boolean isCat;
+    	if (cat.whiskers == true && cat.legs == 4) {
+    		isCat = true;
+    	} else {
+    		isCat = false;
+    	}
+    	return isCat;
+    }
 
 }
