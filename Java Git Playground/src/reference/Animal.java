@@ -8,6 +8,15 @@ package reference;
 public class Animal {
     int legs;
     boolean whiskers;
+    /**
+     * Allows user to check whether given object is a Cat type by testing fields
+     * <p>
+     * Specifically, checks whiskers and legs fields for correlation with known attributes of cats. 
+     * Because it takes a Cat type object as a parameter, essentially checks to see if the object 
+     * has been modified in any way beyond the original attributes of the stock Cat object.
+     * @param cat : pass a Cat type item into this argument. 
+     * @return A boolean value representing whether the parameter was an unmodified Cat object or not
+     */
     public static boolean isItACat(Cat cat) {
     	boolean isCat;
     	if (cat.whiskers == true && cat.legs == 4) {
