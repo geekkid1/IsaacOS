@@ -1,5 +1,5 @@
 package javaProject1;
-import reference.Cat;
+import javaProject1.reference.Cat;
 /**
  * This is the class you want to run, as it is the only one with any real content, 
  * meaning a main() function.

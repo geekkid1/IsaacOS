@@ -1,4 +1,4 @@
-package reference;
+package javaProject1.reference;
 /** 
  * Parent class for all Animal type objects.
  * <p>
