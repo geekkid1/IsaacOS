@@ -9,6 +9,8 @@ package javaProject1.reference;
  *
  */
 public class Cat extends Animal {
+	
+	public Cat()
 	{
 		this.legs = 4;
 		this.whiskers = true;
