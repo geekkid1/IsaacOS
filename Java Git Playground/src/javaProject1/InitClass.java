@@ -12,11 +12,7 @@ public class InitClass {
 	 * line. It is just a method to test and practice some Java I just learned
 	 */
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		
-=======
 		Cat cat = new Cat();
 		System.out.println(Cat.isItACat(cat));
->>>>>>> Beta_Extensions_Branch
 	}
 }
