@@ -8,15 +8,12 @@ import javaProject1.reference.Cat;
  */
 public class InitClass {
 	/**
-	 * This method just initializes a new Cat and checks to see if it has been modified by the next 
-	 * line. It is just a method to test and practice some Java I just learned
+	 * This method just initializes a new Cat and checks to see if it has been modified before the next 
+	 * line. It is just a method to test and practice some Java I just learned in the past week or so 
+	 * since 10/3
 	 */
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		
-=======
 		Cat cat = new Cat();
 		System.out.println(Cat.isItACat(cat));
->>>>>>> Beta_Extensions_Branch
 	}
 }
