@@ -6,13 +6,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 import ref.Exceptions.*;
+import ref.os.Module;
 /**
- * This is a simple class that I will be using to practice using the Scanner class for console
- *  input. Like most of the classes in this project, this is useless for anything you might want
- *  to use it for that would actually have a legitimate use in everyday programming life.
- *  
- *  Also to test out a game I like to call "The exception game." Each time something happens to
- *  end the game (quite often actually), there will be some sort of customized throwable.
+ * This is a terminal based program that can have Modules that implement the module interface: {@link ref.os.Module}
+ * to expand and modify the user experience. 
  * @author Isaac Blum
  */
 public class IsaacOS {
@@ -47,5 +44,8 @@ public class IsaacOS {
 		String choice = input.next();
 		System.out.println("");
 		return choice;
+	}
+	public void mainRunCommand(Module module, String cmd) {
+		module.runCommand(cmd);
 	}
 }
