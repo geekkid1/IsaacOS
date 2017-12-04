@@ -1,7 +1,6 @@
 package ref.regex;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -33,7 +32,8 @@ public class UnitTester {
 	 * One basic test case for general and one for each of my data types: email, phone, street address, etc.
 	 *  
 	 */
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void basicTests() {
 		assertEquals(9, (3*3)); //just a quick test to make sure everything is running smoothly
 		assertTrue(m.eMail("email@domain.net")); //example valid email
@@ -44,7 +44,8 @@ public class UnitTester {
 	 * This Test tests the regular expression's ability to maintain a true return
 	 * even when legal modifications to the username in the address are made.
 	 */
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void userNameModifications() {
 		assertTrue(m.eMail("hyphenated-username@domain.net")); //hyphen in username
 		assertTrue(m.eMail("underscored_username@domain.net")); //underscore in username
@@ -55,7 +56,8 @@ public class UnitTester {
 	 * This test tests the expression's ability to maintain true with legal domain
 	 * changes, like subdomains, hyphens, or a domain extension longer than 3 letters long.
 	 */
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void domainModifications() {
 		assertTrue(m.eMail("email@subdomain.domain.net")); //dotted subdomain (e.g. subdomain.tumblr.com, subdomain.wordpress.com, etc.)
 		assertTrue(m.eMail("email@hyphenated-url.net")); //hyphen in the domain name
@@ -64,21 +66,24 @@ public class UnitTester {
 	/**
 	 * 
 	 */
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void dateReturnMonth() {
 		assertEquals(1, m.dateMonth(testDate1));
 		assertEquals(10, m.dateMonth(testDate2));
 		assertEquals(5, m.dateMonth(testDate3));
 		assertEquals(3, m.dateMonth(testDate4));
 	}
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void dateReturnDay() {
 		assertEquals(28, m.dateDay(testDate1));
 		assertEquals(19, m.dateDay(testDate2));
 		assertEquals(17, m.dateDay(testDate3));
 		assertEquals(7, m.dateDay(testDate4));
 	}
-	@Test
+	@Ignore("Doing something else")
+	//@Test
 	public void dateReturnYear() {
 		assertEquals(2001, m.dateYear(testDate1));
 		assertEquals(2000, m.dateYear(testDate2));
