@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import ref.Exceptions.*;
 import ref.os.Module;
+import ref.os.modules.*;
 /**
  * This is a terminal based program that can have Modules that implement the module interface: {@link ref.os.Module}
  * to expand and modify the user experience. 
@@ -14,8 +15,8 @@ import ref.os.Module;
  */
 public class IsaacOS {
 	Scanner input = new Scanner(System.in);
-	ArrayList<String> packageNames = new ArrayList<String>();
-	ArrayList<Module> packages = new ArrayList<Module>();
+	ArrayList<String> moduleNames = new ArrayList<String>();
+	ArrayList<Module> modules = new ArrayList<Module>();
 	Map<String, ArrayList<String>> commands = new HashMap<String, ArrayList<String>>();
 	/**
 	 * Load packages here.
@@ -32,7 +33,8 @@ public class IsaacOS {
 	 * initPackage(packageName);
 	 */
 	public IsaacOS() {
-		
+		Base base = new Base();
+		initModule(base);
 	}
 	public static void main(String[] args) throws DeathException,ExplodedException{
 		System.out.println("Welcome to IsaacOS!");
@@ -48,9 +50,9 @@ public class IsaacOS {
 	public void mainRunCommand(Module module, String cmd) {
 		module.runCommand(cmd);
 	}
-	public void initPackage(Module module) {
-		packageNames.add(module.getName());
-		packages.add(module);
+	public void initModule(Module module) {
+		moduleNames.add(module.getName());
+		modules.add(module);
 		commands.put(module.getName(),module.getCmds());
 	}
 }
