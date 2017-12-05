@@ -1,13 +1,19 @@
 package ref.os.modules;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import ref.os.Module;
 
 public class TheExceptionGame implements Module {
-	String[] commands = new String[]{"game","help","credits"};
+	ArrayList<String> commands = new ArrayList<String>(Arrays.asList("help","game","credits")); 
 	@Override
 	public void runCommand(String cmd) {
-		if commands
-
+		if (getCmds().contains(cmd)) {
+			
+		} else {
+			System.out.println("System does not recognize \"" + cmd + "\"");
+		}
 	}
 
 	@Override
@@ -16,12 +22,8 @@ public class TheExceptionGame implements Module {
 	}
 
 	@Override
-	public String[] getCmds() {
+	public ArrayList<String> getCmds() {
 		return commands;
 	}
-	public boolean strArrContains(String[] arr) {
-		boolean contains = false;
-		
-		return contains;
-	}
+	
 }

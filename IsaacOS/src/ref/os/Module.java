@@ -1,5 +1,7 @@
 package ref.os;
 
+import java.util.ArrayList;
+
 public interface Module {
 	/**
 	 * Runs the specified command from the module.
@@ -16,5 +18,5 @@ public interface Module {
 	 * in the module.
 	 * @return An array of the commands created for the module
 	 */
-	public String[] getCmds();
+	public ArrayList<String> getCmds();
 }

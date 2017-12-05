@@ -15,7 +15,8 @@ import ref.os.Module;
 public class IsaacOS {
 	Scanner input = new Scanner(System.in);
 	ArrayList<String> packageNames = new ArrayList<String>();
-	Map<String, String[]> commands = new HashMap<String, String[]>();
+	ArrayList<Module> packages = new ArrayList<Module>();
+	Map<String, ArrayList<String>> commands = new HashMap<String, ArrayList<String>>();
 	/**
 	 * Load packages here.
 	 * <p>
@@ -28,8 +29,7 @@ public class IsaacOS {
 	 * import it above the class declaration <p>
 	 * where package class name is PackageName: <br>
 	 * PackageName packageName = new PackageName(); <br>
-	 * packages.add(packageName.name); <br>
-	 * commands.put(packageName.name, packageName.commands); <br>
+	 * initPackage(packageName);
 	 */
 	public IsaacOS() {
 		
@@ -47,5 +47,10 @@ public class IsaacOS {
 	}
 	public void mainRunCommand(Module module, String cmd) {
 		module.runCommand(cmd);
+	}
+	public void initPackage(Module module) {
+		packageNames.add(module.getName());
+		packages.add(module);
+		commands.put(module.getName(),module.getCmds());
 	}
 }
