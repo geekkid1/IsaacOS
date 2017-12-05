@@ -15,9 +15,10 @@ import ref.os.modules.*;
  */
 public class IsaacOS {
 	Scanner input = new Scanner(System.in);
-	ArrayList<String> moduleNames = new ArrayList<String>();
+	public ArrayList<String> moduleNames = new ArrayList<String>();
 	ArrayList<Module> modules = new ArrayList<Module>();
 	Map<String, ArrayList<String>> commands = new HashMap<String, ArrayList<String>>();
+	public String currentModule = "Base";
 	/**
 	 * Load packages here.
 	 * <p>
@@ -32,17 +33,19 @@ public class IsaacOS {
 	 * PackageName packageName = new PackageName(); <br>
 	 * initPackage(packageName);
 	 */
+	public static IsaacOS theOS = new IsaacOS();
 	public IsaacOS() {
 		Base base = new Base();
 		initModule(base);
 	}
-	public static void main(String[] args) throws DeathException,ExplodedException{
+	public static void main(String[] args){
 		System.out.println("Welcome to IsaacOS!");
-		IsaacOS theOS = new IsaacOS();
-		String foo = theOS.termIn();
+		theOS = new IsaacOS();
+		String in = theOS.termIn();
+		theOS.runBaseCommand(in);
 	}
 	public String termIn() {
-		System.out.print("> ");
+		System.out.print(currentModule + "> ");
 		String choice = input.next();
 		System.out.println("");
 		return choice;
@@ -54,5 +57,13 @@ public class IsaacOS {
 		moduleNames.add(module.getName());
 		modules.add(module);
 		commands.put(module.getName(),module.getCmds());
+	}
+	public void runBaseCommand(String cmd) {
+		if(currentModule.equals("Base")) {
+			mainRunCommand(modules.get(moduleNames.indexOf("Base")), cmd);
+		} else {
+			int index = moduleNames.indexOf(currentModule);
+			mainRunCommand(modules.get(index), cmd);
+		}
 	}
 }
