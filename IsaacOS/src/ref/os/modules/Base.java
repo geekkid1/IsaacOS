@@ -10,8 +10,10 @@ public class Base implements Module {
 	ArrayList<String> commands = new ArrayList<String>(Arrays.asList("load","quit","list"));
 	@Override
 	public void runCommand(String cmd) {
-		if (commands.contains(cmd)) {
-			if(cmd.substring(0,4).equalsIgnoreCase("load")) {
+		int sep = cmd.indexOf(" ");
+		String command = cmd.substring(0,sep);
+		if (commands.contains(command)) {
+			if(command.equals("load")) {
 				load(cmd.substring(5));
 			}
 		} else {

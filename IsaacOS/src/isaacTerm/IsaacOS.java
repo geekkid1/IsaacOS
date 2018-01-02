@@ -45,9 +45,8 @@ public class IsaacOS {
 		theOS.runBaseCommand(in);
 	}
 	public String termIn() {
-		System.out.print(currentModule + "> ");
-		String choice = input.next();
-		System.out.println("");
+		System.out.print("IsaacOS." + currentModule + " > ");
+		String choice = input.nextLine();
 		return choice;
 	}
 	public void mainRunCommand(Module module, String cmd) {
@@ -60,7 +59,7 @@ public class IsaacOS {
 	}
 	public void runBaseCommand(String cmd) {
 		if(currentModule.equals("Base")) {
-			mainRunCommand(modules.get(moduleNames.indexOf("Base")), cmd);
+			mainRunCommand(modules.get(0), cmd);
 		} else {
 			int index = moduleNames.indexOf(currentModule);
 			mainRunCommand(modules.get(index), cmd);

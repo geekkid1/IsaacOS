@@ -2,11 +2,5 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/ibtro/Downloads/junit-4.10.jar" sourcepath="C:/Users/ibtro/Downloads/junit-4.12-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/ibtro/Downloads/junit-4.12-javadoc.jar!/org"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ibtro/Downloads/swt-4.7.1a-win32-win32-x86/swt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
